@@ -9,7 +9,7 @@ use GuzzleHttp\RequestOptions;
 
 class ApiController extends Controller
 {
-    public function GetRecords() 
+    public function getRecords() 
     {
 
 
