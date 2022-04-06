@@ -9,7 +9,7 @@ use GuzzleHttp\RequestOptions;
 
 class ApiController extends Controller
 {
-    public function getRecords() 
+    public function GetRecords() 
     {
 
 
@@ -46,13 +46,13 @@ class ApiController extends Controller
     
         return view('new', compact('get_array_quotes'));  
         
-        //it for catching 400 code error
+        //This is for for catching 400 code error
     }catch(\GuzzleHttp\Exception\ClientException $e){
       echo $e->getCode() ."\r\n";
       echo $e->getMessage() ."\r\n";
     }
 
-     //it for catching 500 code error
+     //This is for catching 500 code error
     catch(\GuzzleHttp\Exception\ServerException $e){
         
     echo $e->getCode() ."\r\n";
