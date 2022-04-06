@@ -26,7 +26,7 @@ public function test_guzzle_client_by_mocking_api() {
         'quotes'=>"I love coding"
             ]);
 // Create a new mock handler.
-//An HTTP handler that returns mock rersponses
+//An HTTP handler that returns mock responses
 //build two array of responses
 $mock = new MockHandler([
     //Adding a basic response without header
@@ -89,9 +89,6 @@ $handlerStack->push($history);
 $client = new Client(['handler' => $handlerStack]);
 
 //create two request
-// $client->get('https://jsonplaceholder.typicode.com/posts/2');
-// $client->get('https://jsonplaceholder.typicode.com/posts/1', ['http_errors'=>false]);
-
 
 $client->request('GET', 'http://httpbin.org/get');
 $client->request('HEAD', 'http://httpbin.org/get');
